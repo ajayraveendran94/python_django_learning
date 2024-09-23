@@ -16,10 +16,10 @@ print(new_string.split('a')) #Split the string into array by default with spaces
 print(('.....').join(new_string.split('a'))) #join used to combine the array with given character
 
 #string concatnation
-formattted_string_1 = "My Name is %s" % (new_string)
-formattted_string_2 = "My Name is {}".format(new_string)
-formattted_string_2 = "{a} My Name is {b}".format(a= 'Hi', b=new_string)
-formattted_string_3 = f"My Name is {new_string}" 
+formattted_string_1 = "My Name is %s" % (new_string) #Using %s
+formattted_string_2 = "My Name is {}".format(new_string) #Using format function
+formattted_string_2 = "{a} My Name is {b}".format(a= 'Hi', b=new_string) #Using format function
+formattted_string_3 = f"My Name is {new_string}" #Using f
 print(formattted_string_1)
 print(formattted_string_2)
 print(formattted_string_3)
