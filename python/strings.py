@@ -5,6 +5,8 @@ print(my_string[-1]) #print the last letter of string
 print(my_string[4:]) #Skip the first 4 letters and print others
 print(my_string[:4]) #Catch the first 4 letters (catch the word upto 3 position)
 print(my_string[2:6]) #Catch the letters from 2 to 5 position
+print(my_string[::-1]) #Reverse string using indexing
+
 print(my_string.upper()) #Convert to uppercase, lower() used to convert to lowercase
 print(my_string.capitalize()) #Convert the first letter to Uppercase
 print(my_string.casefold()) #same as lower() method, but the casefold() method is stronger, more aggressive, meaning that it will convert more characters into lower case, and will find more matches when comparing two strings and both are converted using the casefold() method.
