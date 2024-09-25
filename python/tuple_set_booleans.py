@@ -26,5 +26,5 @@ x.add("data") #if we add the same data multiple times it will not add
 x.add("data")
 print(x)
 random_data = [1,2,3,43,21,2,1,2,3,1,23,1,23,12,2,1,2,3]
-y = set(random_data)
+y = set(random_data) #Will convert the list into sets
 print(y)
