@@ -20,6 +20,7 @@ pop_list_ = my_list.pop(5) #remove the given index element from list
 print(my_list)
 
 number_list = [76,89,87.2,897,23,356]
+print(33 in number_list) # Check the number 33 is present in the number_list
 number_list.reverse()
 print(number_list)
 number_list.sort()
