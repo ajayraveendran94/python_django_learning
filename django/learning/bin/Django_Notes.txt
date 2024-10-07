@@ -1,0 +1,43 @@
+Create a virtual environment : python -m venv {env name}
+Activate env - source {env name}/bin/activate
+install Django - django-admin startproject django_first_project
+Django version check - python -m django --version 
+Run Server : python manage.py runserver
+To create a basic app in your Django project you need to go to the directory containing manage.py and from there enter the command :
+- python manage.py startapp first_app
+Add in view file:
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    def index(request):
+        return HttpResponse("Hello world")
+    def random(request):
+        return HttpResponse("My name is Ajay")
+Add in url.py
+    from {AppName} import views
+
+    urlpatterns = [
+        path('',views.index, name='index'),
+        path('random/',views.random, name='random'),
+        path('admin/', admin.site.urls),
+    ]
+In settings.py 
+    INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    {AppName}
+    ]
+include url.py inside the app
+    from django.urls import include
+    path('first_app/', include('first_app.urls'))
+: So urls in the urls.py in first_app folder will include here
+
+Templates are a key part to
+understanding how Django really works
+and interacts with your website.
+● Later on we will learn about how to
+connect templates with models so you
+can display data created dynamically.
