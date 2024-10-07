@@ -41,3 +41,28 @@ and interacts with your website.
 ● Later on we will learn about how to
 connect templates with models so you
 can display data created dynamically.
+
+Steps for migrations
+python manage.py migrate 
+python manage.py makemigrations {Appname}
+python manage.py migrate 
+python manage.py shell : For shell command, directly interact to DB
+    In the shell
+    import the model : from {app name}.models import {ModelName}
+    eg: from first_app.models import Topic
+        t = Topic(topic_name= "Soclial Network")
+        t.save()
+        print(Topic.objects.last()) -> o/p: Soclial Network
+        print(Topic.objects.all()) -> o/p: QuerySet [<Topic: Soclial Network>]>
+
+To use the admin feature in django
+Create super user first : python manage.py createsuperuser 
+And make some changes in admin.py file
+ eg: from django.contrib import admin
+
+    # Register your models here.
+    from first_app.models import Topic, Webpage, AccessRecord
+
+    admin.site.register(Topic)
+    admin.site.register(Webpage)
+    admin.site.register(AccessRecord)   
